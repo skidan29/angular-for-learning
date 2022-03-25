@@ -1,6 +1,8 @@
 <button (click)="animate()">animate</button>
+<button (click)="boxState='special'">Set special state</button>
+<button (click)="visible=!visible">Visible</button>
 <hr>
 <div class="wrap">
 
-    <div class="box" [@box]="boxState">Animation</div>
+    <div *ngIf="visible" class="box" [@box]="boxState">Animation</div>
 </div>

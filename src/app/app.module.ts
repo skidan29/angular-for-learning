@@ -6,12 +6,14 @@ import { AppComponent } from './app.component';
 import { StyleDirective } from './directives/style.directive';
 import { TestPageComponent } from './test-page/test-page.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { AnimateComponent } from './animate/animate.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     StyleDirective,
-    TestPageComponent
+    TestPageComponent,
+    AnimateComponent
   ],
   imports: [
     BrowserModule,
