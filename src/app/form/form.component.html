@@ -1,0 +1,37 @@
+<div class="container">
+    <form class="card" [formGroup]="form" (ngSubmit)="Submit()">
+        <h1>Angular Form</h1>
+
+        <div class="form-control">
+            <label>Email:</label>
+            <input type="text" placeholder="email" formControlName="email">
+        </div>
+        <div class="form-control">
+            <label>Password:</label>
+            <input type="password" placeholder="password" formControlName="password" #inputPass>
+            <button type="button" (click)="inputPass.type = (inputPass.type === 'password') ? 'text' : 'password'">Показать пароль</button>
+        </div>
+        <div class="form-control" formGroupName="address">
+            <label>Выбери старану:</label>
+            <select formControlName="country">
+                <option value="ru">Россия</option>
+                <option value="by">Белорусия</option>
+                <option value="ua">Украина</option>
+            </select>
+            <label>Ввведи город:</label>
+            <input type="text" placeholder="введи город" formControlName="city">
+        </div>
+        <button type="button" (click)="setCapital()">Выбрать столицу</button>
+        <button type="submit" [disabled]="form.invalid">Отправить форму</button>
+
+        <div class="card" formGroupName="skills">
+            <h2>Ваши навыки</h2>
+            <button class="btn" type="button" (click)="addSkill()">Добавить умение</button>
+            <div class="form-control" *ngFor="let control of skills.controls; let idx = index">
+                <label>Умение: {{idx+1}}</label>
+                <input type="text" [formControlName]="idx">
+            </div>
+        </div>
+
+    </form>
+</div>

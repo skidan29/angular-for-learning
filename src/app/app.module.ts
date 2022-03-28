@@ -7,17 +7,22 @@ import { StyleDirective } from './directives/style.directive';
 import { TestPageComponent } from './test-page/test-page.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AnimateComponent } from './animate/animate.component';
+import { FormComponent } from './form/form.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { FormBuilderComponent } from './form-builder/form-builder.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     StyleDirective,
     TestPageComponent,
-    AnimateComponent
+    AnimateComponent,
+    FormComponent,
+    FormBuilderComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule, BrowserAnimationsModule
+    AppRoutingModule, BrowserAnimationsModule,ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

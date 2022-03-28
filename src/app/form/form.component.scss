@@ -1,0 +1,25 @@
+.container {
+    display: flex;
+    flex-direction: column;
+}
+.form-control {
+    border: 1px dashed grey;
+    & input{
+        width: 250px;
+        height: 38px;
+        border-radius: 3px;
+
+        &.ng-dirty.ng-touched {
+            border: 1px solid red;
+        }
+        &.ng-valid.ng-touched {
+            border: 1px solid green;
+        }
+    }
+    & select{
+        width: 250px;
+        height: 38px;
+
+    }
+}
+
