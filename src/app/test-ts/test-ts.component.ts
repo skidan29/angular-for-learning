@@ -1,6 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 
-
+enum Berry {
+    Apple = "apple",
+    Chery = "chery",
+    Orange = "orange"
+}
 
 @Component({
   selector: 'app-test-ts',
@@ -18,10 +22,18 @@ export class TestTsComponent implements OnInit {
       const array2 = [3, 12, 3, 130, 3];
       const array3 = [3, 12, 3, 130, 3,[3, 12, 3, 130, [44,44],3]];
 
+      const array4 = ['Apple', 'Chery', 'Orange'];
+      let oneBerry = Berry.Orange;
 
-      console.log(
-        array1.slice(1,3)
-      )
+      (function timeToEat(berry: string){
+
+
+            console.log(
+              'Berry', berry
+            )
+        })(oneBerry);
+
+
   }
 
 }
