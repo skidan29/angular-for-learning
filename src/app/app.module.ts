@@ -10,6 +10,7 @@ import { AnimateComponent } from './animate/animate.component';
 import { FormComponent } from './form/form.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { FormBuilderComponent } from './form-builder/form-builder.component';
+import { TestTsComponent } from './test-ts/test-ts.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { FormBuilderComponent } from './form-builder/form-builder.component';
     TestPageComponent,
     AnimateComponent,
     FormComponent,
-    FormBuilderComponent
+    FormBuilderComponent,
+    TestTsComponent
   ],
   imports: [
     BrowserModule,

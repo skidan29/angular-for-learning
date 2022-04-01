@@ -1,0 +1,25 @@
+<h2>Form Builder</h2>
+<form class="person" [formGroup]="form" (ngSubmit)="onSubmit()">
+    <div>
+        <div class="person__control">
+            <label>Имя</label>
+            <input type="text" formControlName="name">
+        </div>
+
+        <div class="person__control">
+            <label>Возраст</label>
+            <input type="text" formControlName="age">
+        </div>
+
+        <div class="person__control">
+            <label>Пол</label>
+            <select formControlName="gender">
+                <option value="M">Mужчина</option>
+                <option value="W">Женщина</option>
+            </select>
+        </div>
+    </div>
+    <button type="submit">Отправить</button>
+</form>
+
+

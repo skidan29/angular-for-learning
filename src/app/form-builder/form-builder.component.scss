@@ -1,0 +1,22 @@
+.person {
+    border: 1px dashed grey;
+    width: 300px;
+    padding: 10px;
+    &__control {
+        margin-top: 10px;
+        display: flex;
+        justify-content: space-between;
+    }
+}
+.test  {
+    border: 1px solid black;
+    display: flex;
+    & span+span {
+        padding-left:5px ;
+        padding-right: 5px ;
+    }
+
+}
+
+
+
