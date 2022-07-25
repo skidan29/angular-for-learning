@@ -11,4 +11,8 @@ export class TestingService {
     getValue(index: number): string {
         return this.firstDependencyService.returnValue(index);
     }
+
+    getIndex(): number {
+        return 2;
+    }
 }
